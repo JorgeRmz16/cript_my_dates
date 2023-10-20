@@ -68,7 +68,10 @@ if __name__ == '__main__':
         except ValueError:
             print('Opción no válida. Debe ser un número entero.')
             continue
+        os.system('cls')
         if opc == 1:
+            print('\nEncriptamiento:\n')
+            print(r'** Ruta ejemplo = C:\Users\TuUsuario\Documents\CarpetaObjetivo **')
             path_to_encrypt = r'' + input("\nIntroduce la ruta a encriptar: ")
             if not os.path.exists(path_to_encrypt):
                 print(f"La ruta '{path_to_encrypt}' no existe. Asegúrate de que la ruta sea válida.")
@@ -80,6 +83,8 @@ if __name__ == '__main__':
             encrypt(full_path, key)
             print('\nEncriptacion exitosa...\n')
         elif opc == 2:
+            print('\nDesencriptamiento:\n')
+            print(r'** Ruta ejemplo = C:\Users\TuUsuario\Documents\CarpetaObjetivo **')
             path_to_encrypt = r'' + input("\nIntroduce la ruta a desencriptar: ")
             if not os.path.exists(path_to_encrypt):
                 print(f"La ruta '{path_to_encrypt}' no existe. Asegúrate de que la ruta sea válida.")
